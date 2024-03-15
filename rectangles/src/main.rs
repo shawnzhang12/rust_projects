@@ -12,7 +12,7 @@ impl Rectangle {
     }
 
     fn can_hold(&self, other: &Rectangle) -> bool {
-        sefl.width > other.width && self.height > other.height
+        self.width > other.width && self.height > other.height
     }
 
     //associated functions
@@ -62,17 +62,17 @@ fn main() {
     let rect4 = Rectangle {
         width: 30,
         height: 50,
-    }
+    };
 
     println!(
         "The area of the rectangle is {} square pixels",
         rect4.area()
-    )
+    );
 
-    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect1 hold rect2? {}", rect2.can_hold(&rect3));
 
     //Calling an associate function
-    let sq = Rectangle::square(3);
+    let _sq = Rectangle::square(3);
 }
 
 fn area3(rectangle: &Rectangle) -> u32 {
